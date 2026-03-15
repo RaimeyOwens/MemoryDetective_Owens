@@ -140,9 +140,13 @@ void investigate_heap() {
     // Example: printf("heap_int: address = %p, value = %d, size = %zu bytes\n",
     //                 (void*)heap_int, *heap_int, sizeof(int));
    
-    *heap_int = 777;
-    printf("heap_int: address = %p, value = %d, size = %zu bytes\n",(void*)heap_int, *heap_int, sizeof(int));
-    
+
+    if (heap_int != NULL) {
+         *heap_int = 777;
+        printf("Allocated successfully!\n");
+        printf("heap_int: address = %p, value = %d, size = %zu bytes\n",(void*)heap_int, *heap_int, sizeof(int));
+    }
+
     // TODO: Free the allocated memory using free(heap_int)
     // Note: After free(), the pointer still holds the address, but the memory
     // is no longer yours to use (we will explore this more in Unit 3)
