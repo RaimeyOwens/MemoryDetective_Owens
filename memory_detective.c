@@ -139,9 +139,7 @@ void investigate_heap() {
     //
     // Example: printf("heap_int: address = %p, value = %d, size = %zu bytes\n",
     //                 (void*)heap_int, *heap_int, sizeof(int));
-    
-    
-
+   
     *heap_int = 777;
     printf("heap_int: address = %p, value = %d, size = %zu bytes\n",(void*)heap_int, *heap_int, sizeof(int));
     
