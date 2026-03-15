@@ -81,11 +81,13 @@ void investigate_stack() {
 
 void nested_function_call() {
     // TODO: Declare a local integer called 'nested_var' with value 999
+    int nested_var = 999;
     
     
     printf("\n=== NESTED FUNCTION STACK ===\n");
     // TODO: Print the address and value of nested_var
     // Observe: Is this address higher or lower than variables in investigate_stack()?
+    printf("nested_var: address = %p, value = %d\n", (void*)&nested_var, nested_var);
     
 }
 
